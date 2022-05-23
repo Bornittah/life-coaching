@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url('./font/CocogooseProLight-trial.ttf') format('truetype');
+}
+
+.dark {
+  color: #272a31;
+}
+
+.orange {
+  color: #ec5242;
+}
+
+.gray {
+  color: #d3d3d3;
+}
+
+.dark-bg {
+  background-color: #272a31;
+  color: #d3d3d3;
+}
+
+.top-bar {
+  width: 100%;
+}
+
+.topbar-menu {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+.menu-link {
+  text-decoration: none;
+  padding: 8px;
+}
+
+.menu-link a {
+  text-decoration: none;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  align-items: center;
+}
+
+.main-menu.active {
+  display: flex;
+  align-items: initial;
+  margin: 24px auto;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-link {
+  padding: 12px;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+.nav-link a:active {
+  color: #ec5242;
+}
+
+.nav-link a:hover {
+  color: #ec5242;
+}
+
+.hamburger {
+  cursor: pointer;
+  color: #1a1b1b;
+  display: none;
+}
+
+.bar {
+  display: flex;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #1a1b1b;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #1a1b1b;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #1a1b1b;
+}
+
+.overlay.active {
+  display: block;
+  height: 90%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 5%;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  left: 0;
+  margin: auto 0;
+  overflow: hidden;
+  transition: 0.5s;
+  color: white;
+}
+
+.logo {
+  text-decoration: none;
+  display: block;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.nav.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo.active {
+  display: none;
+}
+
+.menu.active {
+  display: block;
+  text-align: left;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-link a:active {
+    color: #ec5242;
+  }
+
+  .nav-link a:hover {
+    color: #ec5242;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-menu {
+    margin: 24px auto;
+  }
+}
