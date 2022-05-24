@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Cocogoose;
-  src: url('./font/CocogooseProLight-trial.ttf') format('truetype');
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
 .dark {
@@ -69,6 +70,24 @@
 
 .nav-link {
   padding: 12px;
+}
+
+.join-btn a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ec5242;
+  padding: 18px;
+}
+
+.more-btn a {
+  text-decoration: none;
+  padding: 12px;
+}
+
+.view-more a {
+  margin: 24px auto;
+  color: #fff;
+  text-align: center;
 }
 
 .nav-link a {
@@ -151,12 +170,192 @@
   text-align: left;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 auto;
+.container {
+  margin: 0 100px;
+}
+
+.home {
+  height: 80vh;
+  padding: 100px auto;
+}
+
+.home-title {
+  margin: 8px;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.home-text {
+  border: 1px solid #fff;
+  background: #d3d3d3;
+  width: 50%;
+  margin: 8px;
+}
+
+.sub-text {
+  margin: 8px;
+  line-height: 1.5;
+}
+
+/* service section */
+
+.hr {
+  width: 50px;
+  margin: 12px auto;
+  border: 1px solid #ec5242;
+}
+
+.title {
+  text-align: center;
+  align-items: center;
+}
+
+.services {
+  background: url(../images/bg3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 32px;
+  margin: 24px auto;
+}
+
+.transparent-bg {
+  background: rgba(112, 116, 112, 0.3);
+  color: #fff;
+}
+
+.service-gird-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-gird-col {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+}
+
+.view-more {
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.view-more a:hover {
+  color: #ec5242;
+}
+
+.join-btn {
+  display: none;
+  justify-content: center;
+}
+
+/* coach section */
+
+.coach-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  margin: 18px auto;
+}
+
+.card-header {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: 50px;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.bg-image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.card-body {
+  margin-left: 18px;
+}
+
+.card-title {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.card-title p {
+  font-style: italic;
+}
+
+.card-title hr {
+  width: 24px;
+  border: 1px solid #d3d3d3;
+}
+
+.more-btn {
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  border: 1px solid #d3d3d3;
+}
+
+.more-btn a:hover {
+  color: #ec5242;
+}
+
+/* partners */
+
+.partners {
+  background: #272a31;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  text-decoration: none;
+  display: block;
+}
+
+.footer-logo img {
+  height: 100px;
+}
+
+.footer-details {
+  margin-left: 24px;
+  line-height: 2;
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+  }
+
   .top-bar {
     display: none;
   }
@@ -183,5 +382,76 @@
 
   .main-menu {
     margin: 24px auto;
+  }
+
+  .home-text {
+    width: 100%;
+  }
+
+  .home-title {
+    margin: 8px;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .service-gird-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+    padding: 32px;
+  }
+
+  .service-gird-col {
+    padding: 12px;
+    display: flex;
+    width: 100%;
+  }
+
+  .service-icon {
+    width: 30px;
+    margin: 5px;
+  }
+
+  .service-title {
+    margin: 0 8px;
+    font-size: 1rem;
+  }
+
+  .service-desc {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 5px;
+  }
+
+  .view-more {
+    display: none;
+  }
+
+  .join-btn {
+    display: flex;
+  }
+
+  .more-btn {
+    display: flex;
+  }
+
+  .coach-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+  }
+
+  .card {
+    display: flex;
+    margin: 18px auto;
+  }
+
+  .footer-logo img {
+    height: 80px;
+  }
+
+  .footer-details {
+    margin-left: 8px;
+    line-height: 1.5;
   }
 }
