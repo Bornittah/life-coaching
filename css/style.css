@@ -8,6 +8,7 @@
 
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
 }
 
 .dark {
@@ -25,6 +26,10 @@ body {
 .dark-bg {
   background-color: #272a31;
   color: #d3d3d3;
+}
+
+header {
+  background: #fff;
 }
 
 .top-bar {
@@ -53,7 +58,6 @@ body {
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  background: #fff;
   align-items: center;
 }
 
@@ -171,7 +175,7 @@ body {
 }
 
 .container {
-  margin: 0 100px;
+  margin: 32px 100px;
 }
 
 .home {
@@ -186,10 +190,11 @@ body {
 }
 
 .home-text {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   background: #d3d3d3;
   width: 50%;
   margin: 8px;
+  padding: 12px;
 }
 
 .sub-text {
@@ -217,6 +222,7 @@ body {
   color: #fff;
   padding: 32px;
   margin: 24px auto;
+  width: 100%;
 }
 
 .transparent-bg {
@@ -257,6 +263,10 @@ body {
 }
 
 /* coach section */
+
+.coach {
+  /* margin: 32px 0; */
+}
 
 .coach-row {
   display: grid;
@@ -351,6 +361,99 @@ body {
   line-height: 2;
 }
 
+/* about page */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-title {
+  margin: 48px 0;
+  text-align: center;
+}
+
+.about-text {
+  width: 80%;
+  text-align: center;
+  padding: 24px;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 24px auto;
+}
+
+.about-sub-text {
+  margin: 24px auto;
+  text-align: center;
+  line-height: 2;
+}
+
+.about-section-2 {
+  text-align: center;
+  padding: 60px;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 48px auto;
+}
+
+.about-section-2-text {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about-section-2-img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about-section-2-img img {
+  width: auto;
+  height: 220px;
+}
+
+/* summit section */
+
+.summits {
+  margin: 24px auto;
+  width: 80%;
+  position: relative;
+}
+
+.summit-gird-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  padding: 2px;
+  margin: 24px auto;
+}
+
+.summit-gird-col {
+  padding: 12px;
+  width: 100%;
+}
+
+.summit-bg {
+  background: url(../images/life_coaching_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.title-overlay {
+  background-color: rgba(226, 48, 17, 0.8);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+
+.summit-title {
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     margin: 0;
@@ -384,8 +487,16 @@ body {
     margin: 24px auto;
   }
 
+  .home {
+    width: 90%;
+    margin: 32px auto;
+    height: auto;
+  }
+
   .home-text {
     width: 100%;
+    padding: 12px;
+    margin: 0;
   }
 
   .home-title {
@@ -398,7 +509,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 5px;
-    padding: 32px;
+    padding: 2px;
   }
 
   .service-gird-col {
@@ -429,10 +540,16 @@ body {
 
   .join-btn {
     display: flex;
+    margin-top: 24px;
   }
 
   .more-btn {
     display: flex;
+  }
+
+  .coach {
+    width: 90%;
+    margin: 32px auto;
   }
 
   .coach-row {
@@ -454,4 +571,97 @@ body {
     margin-left: 8px;
     line-height: 1.5;
   }
+
+  /* about page */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-title {
+  margin: 48px 0;
+  text-align: center;
+}
+
+.about-text {
+  width: 100%;
+  text-align: center;
+  padding: 24px;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 24px auto;
+}
+
+.about-sub-text {
+  margin: 24px auto;
+  text-align: center;
+  line-height: 2;
+}
+
+.about-section-2 {
+  text-align: center;
+  padding: 12px;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 48px auto;
+}
+
+.about-section-2-text {
+  width:100%;
+  margin: 0 auto;
+}
+
+.about-section-2-img {
+  width:100%;
+  margin: 0 auto;
+}
+
+.about-section-2-img img {
+  width: auto;
+  height: 220px;
+}
+
+/* summit section */
+
+.summits {
+  margin: 24px auto;
+  width: 100%;
+  position: relative;
+}
+
+.summit-gird-row {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 8px;
+  padding: 2px;
+  margin: 24px auto;
+}
+
+.summit-gird-col {
+  padding: 12px;
+  width: 100%;
+}
+
+.summit-bg {
+  background: url(../images/life_coaching_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.title-overlay {
+  background-color: rgba(226, 48, 17, 0.8);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }
+
+.summit-title {
+  color: #fff;
+}
 }
