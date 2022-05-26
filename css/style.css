@@ -433,7 +433,7 @@ footer {
   flex-direction: column;
   background: url(../images/Life-coaching.jpg);
   background-size: cover;
-  background-repeat:repeat;
+  background-repeat: no-repeat;
 }
 
 .about-title {
@@ -454,7 +454,6 @@ footer {
   line-height: 1.5;
   margin: 24px auto;
 }
-
 
 .about-sub-text {
   margin: 24px auto;
