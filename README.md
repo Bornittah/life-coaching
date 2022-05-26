@@ -4,7 +4,7 @@ This is a Capstone project created basing on this [Design template](https://www.
 
 # Live demo
 Click [Life Coaching](https://bornittah.github.io/life-coaching/) to checkout the online version
-Here is the video presenting the features of the project
+[Watch this video](https://www.loom.com/share/803c2d84c6854921aeb38498652e6cd9) to know more about the features of this project
 
 # Getting started
 #### Step 1
