@@ -8,7 +8,7 @@
 
 body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
 }
 
 .dark {
@@ -30,6 +30,9 @@ body {
 
 header {
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .top-bar {
@@ -37,7 +40,7 @@ header {
 }
 
 .topbar-menu {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: flex;
   list-style-type: none;
@@ -56,7 +59,7 @@ header {
 .main-menu {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   align-items: center;
 }
@@ -65,15 +68,26 @@ header {
   display: flex;
   align-items: initial;
   margin: 24px auto;
+  height: 100%;
 }
 
 .nav {
   display: flex;
   list-style-type: none;
+  justify-content: space-between;
+  width: 70%;
 }
 
 .nav-link {
   padding: 12px;
+}
+
+.red-border {
+  border: 2px solid #ec5242;
+}
+
+.less {
+  display: none;
 }
 
 .join-btn a {
@@ -98,11 +112,23 @@ header {
   text-decoration: none;
 }
 
+.nav-link a:link {
+  color: #1a1b1b;
+}
+
 .nav-link a:active {
   color: #ec5242;
 }
 
 .nav-link a:hover {
+  color: #ec5242;
+}
+
+.nav-link a:focus {
+  color: #ec5242;
+}
+
+.nav-link a:visited {
   color: #ec5242;
 }
 
@@ -137,18 +163,14 @@ header {
 
 .overlay.active {
   display: block;
-  height: 90%;
+  height: 90vh;
   width: 100%;
-  position: fixed;
   z-index: 1;
   background-color: #fff;
-  border-radius: 5%;
   box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   left: 0;
-  margin: auto 0;
-  overflow: hidden;
+  overflow: scroll;
   transition: 0.5s;
-  color: white;
 }
 
 .logo {
@@ -185,15 +207,15 @@ header {
 }
 
 .home-overlay {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(209, 204, 204, 0.8);
 }
 
 .home-bg {
-  background: url(../images/Life-Coaching.jpg);
+  background: url(../images/coach-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .home-title p {
@@ -262,6 +284,12 @@ header {
   justify-content: center;
   text-align: center;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-gird-col:hover {
+  border: 1px solid #fff;
 }
 
 .view-more {
@@ -370,11 +398,16 @@ header {
   width: 200px;
 }
 
+footer {
+  bottom: 0;
+}
+
 .footer {
   display: flex;
   padding: 24px;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .footer-logo {
@@ -387,7 +420,7 @@ header {
 }
 
 .footer-details {
-  margin-left: 24px;
+  /* margin-left: 24px; */
   line-height: 2;
 }
 
@@ -398,21 +431,30 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: url(../images/Life-coaching.jpg);
+  background-size: cover;
+  background-repeat:repeat;
 }
 
 .about-title {
-  margin: 48px 0;
+  margin: 38px 0;
   text-align: center;
 }
 
+.about-title h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .about-text {
-  width: 80%;
+  width: 70%;
   text-align: center;
-  padding: 24px;
+  padding: 24px 48px;
   background-color: #fff;
   line-height: 1.5;
   margin: 24px auto;
 }
+
 
 .about-sub-text {
   margin: 24px auto;
@@ -485,6 +527,10 @@ header {
   color: #fff;
 }
 
+.about-patners {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   header {
     background: none;
@@ -511,6 +557,14 @@ header {
   }
 
   .nav-link a:hover {
+    color: #ec5242;
+  }
+
+  .nav-link a:focus {
+    color: #ec5242;
+  }
+
+  .nav-link a:visited {
     color: #ec5242;
   }
 
@@ -548,24 +602,28 @@ header {
 
   .service-gird-col {
     padding: 12px;
-    display: flex;
     width: 100%;
+    flex-direction: row;
   }
 
   .service-icon {
     width: 30px;
     margin: 5px;
+    flex: 1;
   }
 
   .service-title {
     margin: 0 8px;
     font-size: 1rem;
+    flex: 2;
+    word-break: break-all;
   }
 
   .service-desc {
     font-size: 1rem;
     text-align: justify;
     margin: 5px;
+    flex: 4;
   }
 
   .view-more {
@@ -604,6 +662,11 @@ header {
 
   .card-body {
     margin-left: 4px;
+  }
+
+  .footer {
+    background: #fff;
+    color: #1a1b1b;
   }
 
   .footer-logo img {
@@ -712,13 +775,16 @@ header {
   .service-gird-col:hover {
     border: 1px solid #fff;
   }
+
+  .about-patners {
+    display: flex;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1440px) {
   .home {
     width: 90%;
-    margin: 32px auto;
-    height: 80vh;
+    height: 100%;
   }
 
   .home-text {
@@ -734,7 +800,7 @@ header {
 
   /* about page */
 
-  .about {
+  /* .about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -781,7 +847,7 @@ header {
   .about-section-2-img img {
     width: auto;
     height: 220px;
-  }
+  } */
 
   /* summit section */
 
@@ -826,5 +892,9 @@ header {
 
   .service-gird-col:hover {
     border: 1px solid #fff;
+  }
+
+  .about-patners {
+    display: none;
   }
 }
