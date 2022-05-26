@@ -54,8 +54,9 @@ let coaches=[
 ];
 
 let str='';
+let arr=[];
 for(let person of coaches){
-    str+=`<div class="card">
+    str=`<div class="card">
             <div class="card-header">
                 <img src="./images/bg-5.jpg" alt="user" class="bg-image">
                 <img src=${person.photo} alt="user" class="user-image">
@@ -73,7 +74,26 @@ for(let person of coaches){
                 </div>
             </div>
         </div>`;
-
+        arr.push(str);
+}
+window.onload=()=>{
+    document.querySelector('.coaches').innerHTML=arr.join(" ");
+    if(screen.width <= 768){
+        document.querySelector('.coaches').innerHTML=arr.slice(0,2);
+        
+    let moreBtn = document.querySelector('.more-btn');
+    moreBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    document.querySelector('.coaches').innerHTML=arr.join("");
+    document.querySelector('.more').style.display='none';
+    document.querySelector('.less').style.display='block';
+});
+    }
 }
 
-document.querySelector('.coaches').innerHTML=str;
+
+
+
+
+
+
