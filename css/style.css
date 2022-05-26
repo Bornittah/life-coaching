@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.dark {
+  color: #272a31;
+}
+
+.orange {
+  color: #ec5242;
+}
+
+.gray {
+  color: #d3d3d3;
+}
+
+.dark-bg {
+  background-color: #272a31;
+  color: #d3d3d3;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.top-bar {
+  width: 100%;
+}
+
+.topbar-menu {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+.menu-link {
+  text-decoration: none;
+  padding: 8px;
+}
+
+.menu-link a {
+  text-decoration: none;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.main-menu.active {
+  display: flex;
+  align-items: initial;
+  margin: 24px auto;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.nav-link {
+  padding: 12px;
+}
+
+.red-border {
+  border: 2px solid #ec5242;
+}
+
+.less {
+  display: none;
+}
+
+.join-btn a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ec5242;
+  padding: 18px;
+}
+
+.more-btn a {
+  text-decoration: none;
+  padding: 12px;
+}
+
+.view-more a {
+  margin: 24px auto;
+  color: #fff;
+  text-align: center;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+.nav-link a:link {
+  color: #1a1b1b;
+}
+
+.nav-link a:active {
+  color: #ec5242;
+}
+
+.nav-link a:hover {
+  color: #ec5242;
+}
+
+.nav-link a:focus {
+  color: #ec5242;
+}
+
+.nav-link a:visited {
+  color: #ec5242;
+}
+
+.hamburger {
+  cursor: pointer;
+  color: #1a1b1b;
+  display: none;
+}
+
+.bar {
+  display: flex;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #1a1b1b;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #1a1b1b;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #1a1b1b;
+}
+
+.overlay.active {
+  display: block;
+  height: 90vh;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  left: 0;
+  overflow: scroll;
+  transition: 0.5s;
+}
+
+.logo {
+  text-decoration: none;
+  display: block;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.nav.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo.active {
+  display: none;
+}
+
+.menu.active {
+  display: block;
+  text-align: left;
+}
+
+.container {
+  margin: 32px 100px;
+  padding: 32px;
+}
+
+.home {
+  height: 80vh;
+  padding: 100px auto;
+}
+
+.home-overlay {
+  background-color: rgba(209, 204, 204, 0.8);
+}
+
+.home-bg {
+  background: url(../images/coach-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.home-title p {
+  margin: 8px;
+  font-size: 3rem;
+}
+
+.home-title h1 {
+  margin: 8px;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.home-text {
+  border: 2px solid #fff;
+  background: #d3d3d3;
+  width: 50%;
+  margin: 8px;
+  padding: 12px;
+}
+
+.sub-text {
+  margin: 8px;
+  line-height: 1.5;
+}
+
+/* service section */
+
+.hr {
+  width: 50px;
+  margin: 12px auto;
+  border: 1px solid #ec5242;
+}
+
+.title {
+  text-align: center;
+  align-items: center;
+}
+
+.services {
+  background: url(../images/bg3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 32px;
+  margin: 24px auto;
+  width: 100%;
+}
+
+.transparent-bg {
+  background: rgba(112, 116, 112, 0.3);
+  color: #fff;
+}
+
+.service-gird-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-gird-col {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-gird-col:hover {
+  border: 1px solid #fff;
+}
+
+.view-more {
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.view-more a:hover {
+  color: #ec5242;
+}
+
+.join-btn {
+  display: none;
+  justify-content: center;
+}
+
+/* coach section */
+
+.coach-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  margin: 18px auto;
+}
+
+.card-header {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-right: 50px;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.bg-image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.card-body {
+  margin-left: 18px;
+}
+
+.card-title {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.card-title p {
+  font-style: italic;
+}
+
+.card-title hr {
+  width: 24px;
+  border: 1px solid #d3d3d3;
+}
+
+.more-btn {
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  border: 1px solid #d3d3d3;
+}
+
+.more-btn a:hover {
+  color: #ec5242;
+}
+
+/* partners */
+
+.partners {
+  background: #272a31;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.partner-brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 24px;
+}
+
+.partner-brands img {
+  width: 200px;
+}
+
+footer {
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-logo {
+  text-decoration: none;
+  display: block;
+}
+
+.footer-logo img {
+  height: 100px;
+}
+
+.footer-details {
+  /* margin-left: 24px; */
+  line-height: 2;
+}
+
+/* about page */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(../images/Life-coaching.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-title {
+  margin: 38px 0;
+  text-align: center;
+}
+
+.about-title h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.about-text {
+  width: 70%;
+  text-align: center;
+  padding: 24px 48px;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 24px auto;
+}
+
+.about-sub-text {
+  margin: 24px auto;
+  text-align: center;
+  line-height: 2;
+}
+
+.about-section-2 {
+  text-align: center;
+  padding: 60px;
+  background-color: #fff;
+  line-height: 1.5;
+  margin: 48px auto;
+}
+
+.about-section-2-text {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about-section-2-img {
+  width: 60%;
+  margin: 24px auto;
+  border: 1px solid rgb(219, 218, 218);
+}
+
+.about-section-2-img img {
+  width: auto;
+  height: 220px;
+}
+
+/* summit section */
+
+.summits {
+  margin: 24px auto;
+  width: 80%;
+  position: relative;
+}
+
+.summit-gird-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  padding: 2px;
+  margin: 24px auto;
+}
+
+.summit-gird-col {
+  padding: 12px;
+  width: 100%;
+}
+
+.summit-bg {
+  background: url(../images/life_coaching_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.title-overlay {
+  background-color: rgba(226, 48, 17, 0.8);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.summit-title {
+  color: #fff;
+}
+
+.about-patners {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background: none;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .top-bar {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-link a:active {
+    color: #ec5242;
+  }
+
+  .nav-link a:hover {
+    color: #ec5242;
+  }
+
+  .nav-link a:focus {
+    color: #ec5242;
+  }
+
+  .nav-link a:visited {
+    color: #ec5242;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-menu {
+    margin: 24px auto;
+  }
+
+  .home {
+    width: 90%;
+    margin: 32px auto;
+    height: auto;
+  }
+
+  .home-text {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+  }
+
+  .home-title {
+    margin: 8px;
+    font-size: 1.5rem;
+  }
+
+  .service-gird-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+    padding: 2px;
+  }
+
+  .service-gird-col {
+    padding: 12px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .service-icon {
+    width: 30px;
+    margin: 5px;
+    flex: 1;
+  }
+
+  .service-title {
+    margin: 0 8px;
+    font-size: 1rem;
+    flex: 2;
+    word-break: break-all;
+  }
+
+  .service-desc {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 5px;
+    flex: 4;
+  }
+
+  .view-more {
+    display: none;
+  }
+
+  .join-btn {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  .more-btn {
+    display: flex;
+  }
+
+  .coach {
+    width: 100%;
+    margin: 32px auto;
+  }
+
+  .coach-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    overflow: hidden;
+  }
+
+  .card {
+    display: flex;
+    margin: 18px auto;
+  }
+
+  .card-header {
+    margin-right: 24px;
+  }
+
+  .card-body {
+    margin-left: 4px;
+  }
+
+  .footer {
+    background: #fff;
+    color: #1a1b1b;
+  }
+
+  .footer-logo img {
+    height: 80px;
+  }
+
+  .footer-details {
+    margin-left: 4px;
+    line-height: 1.5;
+  }
+
+  /* about page */
+
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .about-title {
+    margin: 48px 0;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+    padding: 24px;
+    background-color: #fff;
+    line-height: 1.5;
+    margin: 24px auto;
+  }
+
+  .about-sub-text {
+    margin: 24px auto;
+    text-align: center;
+    line-height: 2;
+  }
+
+  .about-section-2 {
+    text-align: center;
+    padding: 12px;
+    background-color: #fff;
+    line-height: 1.5;
+    margin: 48px auto;
+  }
+
+  .about-section-2-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-section-2-img {
+    width: 100%;
+    margin: 24px auto;
+    border: 1px solid rgb(219, 218, 218);
+  }
+
+  .about-section-2-img img {
+    width: auto;
+    height: 220px;
+  }
+
+  /* summit section */
+
+  .summits {
+    margin: 24px auto;
+    width: 100%;
+    position: relative;
+  }
+
+  .summit-gird-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 8px;
+    padding: 2px;
+    margin: 24px auto;
+  }
+
+  .summit-gird-col {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .summit-bg {
+    background: url(../images/life_coaching_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+  }
+
+  .title-overlay {
+    background-color: rgba(226, 48, 17, 0.8);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .summit-title {
+    color: #fff;
+  }
+
+  .service-gird-col:hover {
+    border: 1px solid #fff;
+  }
+
+  .about-patners {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .home {
+    width: 90%;
+    height: 100%;
+  }
+
+  .home-text {
+    width: 60%;
+    padding: 12px;
+    margin: 0;
+  }
+
+  .home-title {
+    margin: 8px;
+    font-size: 1.5rem;
+  }
+
+  /* about page */
+
+  /* .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .about-title {
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: justify;
+    padding: 24px;
+    background-color: #fff;
+    line-height: 1.5;
+    margin: 24px auto;
+  }
+
+  .about-sub-text {
+    margin: 24px auto;
+    text-align: center;
+    line-height: 2;
+  }
+
+  .about-section-2 {
+    background-color: #fff;
+    line-height: 1.5;
+    margin: 48px auto;
+  }
+
+  .about-section-2-text {
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-section-2-img {
+    width: 100%;
+    margin: 32px auto;
+  }
+
+  .about-section-2-img img {
+    width: auto;
+    height: 220px;
+  } */
+
+  /* summit section */
+
+  .summits {
+    margin: 24px auto;
+    width: 100%;
+    position: relative;
+  }
+
+  .summit-gird-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+    padding: 2px;
+    margin: 24px auto;
+  }
+
+  .summit-gird-col {
+    padding: 12px;
+    width: 100%;
+  }
+
+  .summit-bg {
+    background: url(../images/life_coaching_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+  }
+
+  .title-overlay {
+    background-color: rgba(226, 48, 17, 0.8);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .summit-title {
+    color: #fff;
+  }
+
+  .service-gird-col:hover {
+    border: 1px solid #fff;
+  }
+
+  .about-patners {
+    display: none;
+  }
+}
