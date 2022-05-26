@@ -352,12 +352,18 @@ header {
 .partners {
   background: #272a31;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .partner-brands {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 24px;
 }
 
 .partner-brands img {
@@ -702,17 +708,21 @@ header {
   .summit-title {
     color: #fff;
   }
+
+  .service-gird-col:hover {
+    border: 1px solid #fff;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1440px) {
   .home {
     width: 90%;
     margin: 32px auto;
-    height: auto;
+    height: 80vh;
   }
 
   .home-text {
-    width: 100%;
+    width: 60%;
     padding: 12px;
     margin: 0;
   }
@@ -812,5 +822,9 @@ header {
 
   .summit-title {
     color: #fff;
+  }
+
+  .service-gird-col:hover {
+    border: 1px solid #fff;
   }
 }
