@@ -4,6 +4,7 @@ This is a Capstone project created basing on this [Design template](https://www.
 
 # Live demo
 Click [Life Coaching](https://bornittah.github.io/life-coaching/) to checkout the online version
+
 [Watch this video](https://www.loom.com/share/803c2d84c6854921aeb38498652e6cd9) to know more about the features of this project
 
 # Getting started
@@ -28,6 +29,7 @@ Give a star if you like this project
 
 # Acknowledgement
  [Microverse](https://www.microverse.org/?grsf=i6yi2m)
+ 
  Designer - [Cindy Shin in Banance](https://www.behance.net/adagio07)
  
 # License
